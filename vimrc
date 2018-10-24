@@ -1,4 +1,10 @@
 "------------------------------------------------------------------------------
+" Taeho's .vimrc
+"
+" Prerequisite: `brew install vim --with-override-system-vim --with-python@2`
+"------------------------------------------------------------------------------
+
+"------------------------------------------------------------------------------
 " Plugins
 "------------------------------------------------------------------------------
 call plug#begin('~/.vim/plugged')
@@ -13,14 +19,23 @@ Plug 'junegunn/fzf.vim'
 
 " Visual components
 Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdcommenter'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'Yggdroot/indentLine'
 " Make sure `ctags` and `gotags` are installed
 Plug 'majutsushi/tagbar'
 
+" Golang
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'nsf/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
+
+" Python
+Plug 'python-mode/python-mode', { 'branch': 'develop' }
+" Install jedi `pip install jedi`
+Plug 'davidhalter/jedi-vim'
+
+" Linter and completion
 Plug 'maralla/completor.vim'
 Plug 'w0rp/ale'
 
@@ -33,6 +48,7 @@ Plug 'junegunn/gv.vim'
 Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-endwise'
+Plug 'spf13/vim-autoclose'
 
 Plug 'editorconfig/editorconfig-vim'
 
@@ -284,7 +300,7 @@ endfunction
 " General properties
 let NERDTreeDirArrows=1
 let NERDTreeMinimalUI=1
-let NERDTreeIgnore=['\.o$', '\.pyc$', '\.php\~$']
+let NERDTreeIgnore=['\.o$', '\.pyc$', '\.php\~$', '__pycache__']
 let NERDTreeWinSize = 35
 
 " Make sure that when NT root is changed, Vim's pwd is also updated
@@ -395,4 +411,11 @@ nmap ]c <Plug>GitGutterNextHunk
 nmap [c <Plug>GitGutterPrevHunk
 nmap <Leader>hs <Plug>GitGutterStageHunk
 nmap <Leader>hu <Plug>GitGutterUndoHunk
+
+
+"------------------------------------------------------------------------------
+" Python
+"------------------------------------------------------------------------------
+let g:pymode_options_max_line_length=120
+autocmd FileType python set colorcolumn=120
 
