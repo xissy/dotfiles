@@ -299,7 +299,7 @@ endfunction
 " General properties
 let NERDTreeDirArrows=1
 let NERDTreeMinimalUI=1
-let NERDTreeIgnore=['\.o$', '\.pyc$', '\.php\~$', '__pycache__']
+let NERDTreeIgnore=['\.o$', '\.pyc$', '\.php\~$', '__pycache__', '\.swp$']
 let NERDTreeWinSize = 35
 let NERDTreeShowHidden=1
 
