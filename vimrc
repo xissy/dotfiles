@@ -301,6 +301,7 @@ let NERDTreeDirArrows=1
 let NERDTreeMinimalUI=1
 let NERDTreeIgnore=['\.o$', '\.pyc$', '\.php\~$', '__pycache__']
 let NERDTreeWinSize = 35
+let NERDTreeShowHidden=1
 
 " Make sure that when NT root is changed, Vim's pwd is also updated
 let NERDTreeChDirMode = 2
