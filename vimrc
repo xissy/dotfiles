@@ -26,14 +26,13 @@ Plug 'Yggdroot/indentLine'
 " Make sure `ctags` and `gotags` are installed
 Plug 'majutsushi/tagbar'
 
-" Golang
+" Languages
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'nsf/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
-
-" Python
-Plug 'python-mode/python-mode', { 'branch': 'develop' }
+""Plug 'python-mode/python-mode', { 'branch': 'develop' }
 " Install jedi `pip install jedi`
-Plug 'davidhalter/jedi-vim'
+""Plug 'davidhalter/jedi-vim'
+Plug 'jparise/vim-graphql'
 
 " Linter and completion
 Plug 'maralla/completor.vim'
