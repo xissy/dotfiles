@@ -196,7 +196,7 @@ set nrformats=octal,hex,alpha
 "------------------------------------------------------------------------------
 " Tab and indent
 "------------------------------------------------------------------------------
-set tabstop=4 softtabstop=4 shiftwidth=4 expandtab
+set tabstop=4 softtabstop=4 shiftwidth=4 expandtab autoindent smartindent
 set list lcs=tab:\|\ "
 
 
