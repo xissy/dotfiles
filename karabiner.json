@@ -407,16 +407,6 @@
                         },
                         {
                             "from": {
-                                "key_code": "grave_accent_and_tilde"
-                            },
-                            "to": [
-                                {
-                                    "key_code": "escape"
-                                }
-                            ]
-                        },
-                        {
-                            "from": {
                                 "key_code": "delete_or_backspace"
                             },
                             "to": [
@@ -424,8 +414,41 @@
                                     "key_code": "grave_accent_and_tilde"
                                 }
                             ]
+                        },
+                        {
+                            "from": {
+                                "key_code": "escape"
+                            },
+                            "to": [
+                                {
+                                    "key_code": "backslash"
+                                }
+                            ]
+                        },
+                        {
+                            "from": {
+                                "key_code": "grave_accent_and_tilde"
+                            },
+                            "to": [
+                                {
+                                    "key_code": "escape"
+                                }
+                            ]
                         }
                     ]
+                },
+                {
+                    "disable_built_in_keyboard_if_exists": false,
+                    "fn_function_keys": [],
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "is_pointing_device": false,
+                        "product_id": 16962,
+                        "vendor_id": 65261
+                    },
+                    "ignore": false,
+                    "manipulate_caps_lock_led": false,
+                    "simple_modifications": []
                 }
             ],
             "fn_function_keys": [
