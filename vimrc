@@ -11,11 +11,13 @@ call plug#begin('~/.vim/plugged')
 
 " Long live junegunn!
 Plug 'junegunn/vim-easy-align'
-Plug 'junegunn/seoul256.vim'
 Plug 'junegunn/vim-pseudocl'
 Plug 'junegunn/vim-fnr'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+
+" color themes
+Plug 'joshdick/onedark.vim'
 
 " Visual components
 Plug 'scrooloose/nerdtree'
@@ -57,8 +59,8 @@ call plug#end()
 "------------------------------------------------------------------------------
 " Color scheme
 "------------------------------------------------------------------------------
-let g:seoul256_background = 233
-colo seoul256
+syntax on
+colorscheme onedark
 
 let g:airline_theme='angr'
 
@@ -109,8 +111,6 @@ set so=999
 " Avoid garbled characters in Chinese language windows OS
 let $LANG='en'
 set langmenu=en
-source $VIMRUNTIME/delmenu.vim
-source $VIMRUNTIME/menu.vim
 
 " Turn on the WiLd menu
 set wildmenu
