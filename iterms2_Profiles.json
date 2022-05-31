@@ -57,7 +57,7 @@
     "slogin",
     "telnet"
   ],
-  "Non-ASCII Ligatures" : true,
+  "Non-ASCII Ligatures" : false,
   "Scrollback Lines" : 100000,
   "Status Bar Layout" : {
     "components" : [
@@ -65,9 +65,6 @@
         "class" : "iTermStatusBarJobComponent",
         "configuration" : {
           "knobs" : {
-            "minwidth" : 0,
-            "base: priority" : 5,
-            "base: compression resistance" : 1,
             "shared text color" : {
               "Red Component" : 0.5,
               "Color Space" : "sRGB",
@@ -75,6 +72,9 @@
               "Alpha Component" : 1,
               "Green Component" : 0.25
             },
+            "base: priority" : 5,
+            "minwidth" : 0,
+            "base: compression resistance" : 1,
             "maxwidth" : 1.7976931348623157e+308
           },
           "layout advanced configuration dictionary value" : {
@@ -175,11 +175,10 @@
         "class" : "iTermStatusBarClockComponent",
         "configuration" : {
           "knobs" : {
+            "format" : "M\/dd h:mm",
             "base: priority" : 5,
             "maxwidth" : 1.7976931348623157e+308,
-            "format" : "M\/dd h:mm",
             "minwidth" : "0",
-            "base: compression resistance" : 1,
             "shared text color" : {
               "Red Component" : 0.5,
               "Color Space" : "sRGB",
@@ -187,6 +186,7 @@
               "Alpha Component" : 1,
               "Green Component" : 0.25
             },
+            "base: compression resistance" : 1,
             "localize" : 1
           },
           "layout advanced configuration dictionary value" : {
