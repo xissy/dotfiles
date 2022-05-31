@@ -57,6 +57,7 @@
     "slogin",
     "telnet"
   ],
+  "Non-ASCII Ligatures" : true,
   "Scrollback Lines" : 100000,
   "Status Bar Layout" : {
     "components" : [
@@ -64,8 +65,9 @@
         "class" : "iTermStatusBarJobComponent",
         "configuration" : {
           "knobs" : {
-            "base: compression resistance" : 1,
+            "minwidth" : 0,
             "base: priority" : 5,
+            "base: compression resistance" : 1,
             "shared text color" : {
               "Red Component" : 0.5,
               "Color Space" : "sRGB",
@@ -73,7 +75,6 @@
               "Alpha Component" : 1,
               "Green Component" : 0.25
             },
-            "minwidth" : 0,
             "maxwidth" : 1.7976931348623157e+308
           },
           "layout advanced configuration dictionary value" : {
@@ -174,10 +175,11 @@
         "class" : "iTermStatusBarClockComponent",
         "configuration" : {
           "knobs" : {
-            "format" : "M\/dd h:mm",
             "base: priority" : 5,
             "maxwidth" : 1.7976931348623157e+308,
+            "format" : "M\/dd h:mm",
             "minwidth" : "0",
+            "base: compression resistance" : 1,
             "shared text color" : {
               "Red Component" : 0.5,
               "Color Space" : "sRGB",
@@ -185,7 +187,6 @@
               "Alpha Component" : 1,
               "Green Component" : 0.25
             },
-            "base: compression resistance" : 1,
             "localize" : 1
           },
           "layout advanced configuration dictionary value" : {
@@ -464,7 +465,7 @@
   },
   "Name" : "Default",
   "Blinking Cursor" : false,
-  "Guid" : "2CBFF316-79E7-43F5-A819-9B07B300786F",
+  "Guid" : "230C4CF9-F4A6-4AA1-AC90-2B069A65C058",
   "Idle Code" : 0,
   "Ansi 10 Color" : {
     "Red Component" : 0.59607845544815063,
@@ -498,7 +499,7 @@
   },
   "Blur" : false,
   "Vertical Spacing" : 1,
-  "Normal Font" : "HackNerdFontCompleteM-Regular 12",
+  "Normal Font" : "Menlo-Regular 12",
   "Ansi 7 Color" : {
     "Red Component" : 0.67058825492858887,
     "Color Space" : "sRGB",
@@ -536,7 +537,7 @@
   },
   "Screen" : -1,
   "Initial Use Transparency" : true,
-  "Non Ascii Font" : "HackNerdFontCompleteM-Regular 11",
+  "Non Ascii Font" : "InconsolataForPowerline 12",
   "Ansi 13 Color" : {
     "Red Component" : 0.7764706015586853,
     "Color Space" : "sRGB",
