@@ -11,13 +11,13 @@ call plug#begin('~/.vim/plugged')
 
 " Long live junegunn!
 Plug 'junegunn/vim-easy-align'
+Plug 'junegunn/seoul256.vim'
 Plug 'junegunn/vim-pseudocl'
 Plug 'junegunn/vim-fnr'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
-" color themes
-Plug 'joshdick/onedark.vim'
+Plug 'rakr/vim-one'
 
 " Visual components
 Plug 'scrooloose/nerdtree'
@@ -59,10 +59,14 @@ call plug#end()
 "------------------------------------------------------------------------------
 " Color scheme
 "------------------------------------------------------------------------------
-syntax on
-colorscheme onedark
+"let g:seoul256_background = 233
+"colo seoul256
 
-let g:airline_theme='angr'
+syntax on
+colorscheme one
+set background=dark
+
+let g:airline_theme='one'
 
 
 "------------------------------------------------------------------------------
