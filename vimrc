@@ -11,12 +11,12 @@ call plug#begin('~/.vim/plugged')
 
 " Long live junegunn!
 Plug 'junegunn/vim-easy-align'
-Plug 'junegunn/seoul256.vim'
 Plug 'junegunn/vim-pseudocl'
 Plug 'junegunn/vim-fnr'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
+" color themes
 Plug 'rakr/vim-one'
 
 " Visual components
@@ -59,12 +59,12 @@ call plug#end()
 "------------------------------------------------------------------------------
 " Color scheme
 "------------------------------------------------------------------------------
-"let g:seoul256_background = 233
-"colo seoul256
-
 syntax on
 colorscheme one
 set background=dark
+
+set termguicolors
+hi Normal guibg=#21252b
 
 let g:airline_theme='one'
 
@@ -399,7 +399,7 @@ let g:rainbow#max_level = 16
 let g:rainbow#pairs = [['(', ')'], ['[', ']'], ['{', '}']]
 
 " List of colors that you do not want. ANSI code or #RRGGBB
-let g:rainbow#blacklist = [168, 10, 230, 144, 186, 187]
+let g:rainbow#blacklist = [9, 145, 102]
 
 augroup vimrc
   autocmd FileType lisp,clojure,scheme,go,python,javascript RainbowParentheses
