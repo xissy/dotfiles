@@ -17,3 +17,10 @@ if type brew &>/dev/null; then
   autoload -Uz compinit
   compinit
 fi
+
+# fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# ls color
+export CLICOLOR=1
+export LSCOLORS=ExGxBxDxCxEgEdxbxgxcxd
