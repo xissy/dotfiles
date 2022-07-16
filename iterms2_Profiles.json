@@ -59,6 +59,7 @@
   ],
   "Non-ASCII Ligatures" : false,
   "Scrollback Lines" : 100000,
+  "Draw Powerline Glyphs" : false,
   "Status Bar Layout" : {
     "components" : [
       {
@@ -431,7 +432,7 @@
     "Green Component" : 0.42352941632270813
   },
   "Use Bold Font" : true,
-  "Silence Bell" : false,
+  "Silence Bell" : true,
   "Ansi 12 Color" : {
     "Red Component" : 0.3803921639919281,
     "Color Space" : "sRGB",
@@ -514,6 +515,7 @@
   "Horizontal Spacing" : 1,
   "Option Key Sends" : 0,
   "Only The Default BG Color Uses Transparency" : false,
+  "Blink Allowed" : false,
   "Minimum Contrast" : 0,
   "Ansi 15 Color" : {
     "Red Component" : 0.67058825492858887,
