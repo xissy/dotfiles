@@ -24,3 +24,7 @@ fi
 # ls color
 export CLICOLOR=1
 export LSCOLORS=ExGxBxDxCxEgEdxbxgxcxd
+
+# go
+export GOPATH=~/go
+export PATH=$PATH:$GOPATH/bin
