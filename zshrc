@@ -28,3 +28,6 @@ export LSCOLORS=ExGxBxDxCxEgEdxbxgxcxd
 # go
 export GOPATH=~/go
 export PATH=$PATH:$GOPATH/bin
+
+# direnv
+eval "$(direnv hook zsh)"
