@@ -90,7 +90,7 @@
     },
     {
       "alignment": "left",
-      "newline": true,
+      "newline": false,
       "segments": [
         {
           "foreground": "#cd5e42",
