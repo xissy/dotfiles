@@ -31,3 +31,9 @@ export PATH=$PATH:$GOPATH/bin
 
 # direnv
 eval "$(direnv hook zsh)"
+
+# zsh history
+setopt sharehistory
+export HISTSIZE=10000000
+export SAVEHIST=10000000
+
