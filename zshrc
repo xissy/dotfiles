@@ -29,6 +29,9 @@ export LSCOLORS=ExGxBxDxCxEgEdxbxgxcxd
 export GOPATH=~/go
 export PATH=$PATH:$GOPATH/bin
 
+# java
+. ~/.asdf/plugins/java/set-java-home.zsh
+
 # direnv
 eval "$(direnv hook zsh)"
 
