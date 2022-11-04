@@ -1,5 +1,5 @@
 golang 1.19.2
 python 3.10.5
 nodejs 16.16.0
-golangci-lint 1.46.2
+golangci-lint 1.50.1
 java openjdk-18.0.2.1
