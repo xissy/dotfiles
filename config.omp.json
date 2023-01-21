@@ -62,7 +62,7 @@
             "powerline_symbol": "\uE0B0",
             "foreground": "#ffffff",
             "background": "#4063D8",
-            "template": " \uE738 {{ .Full }}"
+            "template": " \uE738 {{ .Full }} "
         },
         {
           "background": "#76b367",
@@ -105,8 +105,8 @@
             "always_enabled": true
           },
           "style": "diamond",
-          "template": " {{ if gt .Code 0 }}\uf525{{ else }}\uf469{{ end }}",
-          "trailing_diamond": "\ue0b4",
+          "template": " {{ if gt .Code 0 }}\uf525{{ else }}\uf469{{ end }} ",
+          "trailing_diamond": "\ue0b0",
           "type": "exit"
         }
       ],
