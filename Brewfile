@@ -30,6 +30,7 @@ brew "zsh-completions"
 brew "zsh-syntax-highlighting"
 
 cask "1password"
+cask "font-caskaydia-cove-nerd-font"
 cask "font-meslo-lg-nerd-font"
 cask "google-cloud-sdk"
 cask "iterm2"
