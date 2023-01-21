@@ -1,6 +1,7 @@
 {
 "Profiles": [
 {
+  "Thin Strokes" : 4,
   "Working Directory" : "\/Users\/tkim",
   "Prompt Before Closing 2" : false,
   "Selected Text Color" : {
@@ -37,7 +38,7 @@
     "Green Component" : 0.21960784494876862
   },
   "Blend" : 0.49907721920289849,
-  "Mouse Reporting" : true,
+  "Mouse Reporting" : false,
   "Cursor Boost" : 0,
   "Ansi 4 Color" : {
     "Red Component" : 0.3803921639919281,
@@ -59,7 +60,7 @@
   ],
   "Non-ASCII Ligatures" : false,
   "Scrollback Lines" : 100000,
-  "Draw Powerline Glyphs" : false,
+  "Draw Powerline Glyphs" : true,
   "Status Bar Layout" : {
     "components" : [
       {
@@ -69,14 +70,14 @@
             "maxwidth" : 1.7976931348623157e+308,
             "base: priority" : 5,
             "minwidth" : 0,
+            "base: compression resistance" : 1,
             "shared text color" : {
               "Red Component" : 0.5,
               "Color Space" : "sRGB",
               "Blue Component" : 0.25,
               "Alpha Component" : 1,
               "Green Component" : 0.25
-            },
-            "base: compression resistance" : 1
+            }
           },
           "layout advanced configuration dictionary value" : {
             "remove empty components" : false,
@@ -176,10 +177,11 @@
         "class" : "iTermStatusBarClockComponent",
         "configuration" : {
           "knobs" : {
-            "format" : "M\/dd h:mm",
             "base: priority" : 5,
             "maxwidth" : 1.7976931348623157e+308,
+            "format" : "M\/dd h:mm",
             "minwidth" : "0",
+            "base: compression resistance" : 1,
             "shared text color" : {
               "Red Component" : 0.5,
               "Color Space" : "sRGB",
@@ -187,7 +189,6 @@
               "Alpha Component" : 1,
               "Green Component" : 0.25
             },
-            "base: compression resistance" : 1,
             "localize" : 1
           },
           "layout advanced configuration dictionary value" : {
@@ -223,7 +224,7 @@
     "Alpha Component" : 1,
     "Green Component" : 0.75294119119644165
   },
-  "Use Non-ASCII Font" : false,
+  "Use Non-ASCII Font" : true,
   "Link Color" : {
     "Red Component" : 0.3803921639919281,
     "Color Space" : "sRGB",
@@ -501,8 +502,8 @@
     "Green Component" : 0.14509804546833038
   },
   "Blur" : false,
-  "Vertical Spacing" : 1,
   "Normal Font" : "MesloLGSNerdFontCompleteM-Regular 12",
+  "Vertical Spacing" : 1,
   "Ansi 7 Color" : {
     "Red Component" : 0.67058825492858887,
     "Color Space" : "sRGB",
@@ -515,7 +516,7 @@
   "Horizontal Spacing" : 1,
   "Option Key Sends" : 0,
   "Only The Default BG Color Uses Transparency" : false,
-  "Blink Allowed" : false,
+  "Blink Allowed" : true,
   "Minimum Contrast" : 0,
   "Ansi 15 Color" : {
     "Red Component" : 0.67058825492858887,
@@ -542,7 +543,7 @@
   },
   "Screen" : -1,
   "Initial Use Transparency" : true,
-  "Non Ascii Font" : "MesloLGSNerdFontCompleteM-Regular 12",
+  "Non Ascii Font" : "CaskaydiaCoveNerdFontCompleteM- 12",
   "Ansi 13 Color" : {
     "Red Component" : 0.7764706015586853,
     "Color Space" : "sRGB",
