@@ -6,7 +6,10 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 eval "$(oh-my-posh init zsh --config ~/.config.omp.json)"
 
 # asdf
-. /opt/homebrew/opt/asdf/libexec/asdf.sh
+. $(brew --prefix asdf)/libexec/asdf.sh
+
+# java
+. ~/.asdf/plugins/java/set-java-home.zsh
 
 # zsh plugins
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -26,11 +29,12 @@ export CLICOLOR=1
 export LSCOLORS=ExGxBxDxCxEgEdxbxgxcxd
 
 # go
-export GOPATH=~/go
+export GOPATH=$(go env GOPATH)
+export GOROOT=$(go env GOROOT)
+export GOBIN=$(go env GOBIN)
 export PATH=$PATH:$GOPATH/bin
-
-# java
-. ~/.asdf/plugins/java/set-java-home.zsh
+export PATH=$PATH:$GOROOT/bin
+export PATH=$PATH:$GOBIN
 
 # direnv
 eval "$(direnv hook zsh)"
@@ -39,4 +43,12 @@ eval "$(direnv hook zsh)"
 setopt sharehistory
 export HISTSIZE=10000000
 export SAVEHIST=10000000
+
+# android
+export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
+export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
+
+# bin
+export PATH=$PATH:~/bin
 
