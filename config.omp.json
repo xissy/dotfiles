@@ -57,12 +57,12 @@
           "template": " \uE235 {{ .Full }} "
         },
         {
-            "type": "java",
-            "style": "powerline",
-            "powerline_symbol": "\uE0B0",
-            "foreground": "#ffffff",
-            "background": "#4063D8",
-            "template": " \uE738 {{ .Full }} "
+          "type": "java",
+          "style": "powerline",
+          "powerline_symbol": "\uE0B0",
+          "foreground": "#ffffff",
+          "background": "#4063D8",
+          "template": " \uE738 {{ .Full }} "
         },
         {
           "background": "#76b367",
@@ -78,7 +78,7 @@
           "powerline_symbol": "\uE0B0",
           "foreground": "#ffffff",
           "background": "#e67057",
-          "template": " \uE791 {{ .Full }}"
+          "template": " \uE791 {{ .Full }} "
         },
         {
           "background": "#83769c",
