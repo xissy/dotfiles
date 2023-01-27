@@ -13,7 +13,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'junegunn/vim-easy-align'
 Plug 'junegunn/vim-pseudocl'
 Plug 'junegunn/vim-fnr'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
 " color themes
@@ -202,6 +202,7 @@ set nrformats=octal,hex,alpha
 "------------------------------------------------------------------------------
 set tabstop=4 softtabstop=4 shiftwidth=4 expandtab autoindent smartindent
 set list lcs=tab:\|\ "
+let g:indentLine_conceallevel = 0
 
 
 "------------------------------------------------------------------------------
