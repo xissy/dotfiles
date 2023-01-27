@@ -77,7 +77,7 @@
           "style": "powerline",
           "powerline_symbol": "\uE0B0",
           "foreground": "#ffffff",
-          "background": "#841b2d",
+          "background": "#e67057",
           "template": " \uE791 {{ .Full }}"
         },
         {
