@@ -73,6 +73,14 @@
           "type": "node"
         },
         {
+          "type": "ruby",
+          "style": "powerline",
+          "powerline_symbol": "\uE0B0",
+          "foreground": "#ffffff",
+          "background": "#841b2d",
+          "template": " \uE791 {{ .Full }}"
+        },
+        {
           "background": "#83769c",
           "foreground": "#ffffff",
           "powerline_symbol": "\ue0b0",
