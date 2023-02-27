@@ -5,6 +5,7 @@ tap "homebrew/core"
 
 brew "apktool"
 brew "asdf"
+brew "cloudflare-wrangler2"
 brew "cmake"
 brew "direnv"
 brew "docker"
