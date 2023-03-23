@@ -49,6 +49,12 @@ export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
 export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
 
+# gcloud
+source "/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
+
+# github copilot cli
+eval "$(github-copilot-cli alias -- "$0")"
+
 # bin
 export PATH=$PATH:~/bin
 
