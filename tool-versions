@@ -1,7 +1,5 @@
-golang 1.20
-python 3.11.1
-nodejs 18.13.0
-deno 1.31.1
+python 3.12.4
+nodejs 20.11.1
 java openjdk-18.0.2.1
-ruby 2.7.5
-golangci-lint 1.51.0
+golang 1.22.5
+ruby 3.3.4
