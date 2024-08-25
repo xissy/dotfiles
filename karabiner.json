@@ -193,8 +193,8 @@
                                     }
                                 ],
                                 "from": { "key_code": "j" },
-                                "to": [
-                                    { "key_code": "j" },
+                                "to": [{ "key_code": "j" }],
+                                "to_after_key_up": [
                                     {
                                         "software_function": {
                                             "set_mouse_cursor_position": {
@@ -223,8 +223,8 @@
                                     }
                                 ],
                                 "from": { "key_code": "d" },
-                                "to": [
-                                    { "key_code": "d" },
+                                "to": [{ "key_code": "d" }],
+                                "to_after_key_up": [
                                     {
                                         "software_function": {
                                             "set_mouse_cursor_position": {
