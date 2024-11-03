@@ -52,3 +52,6 @@ export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
 # bin
 export PATH=$PATH:~/bin
 
+# AI-powered scripts
+source ~/git-commit-message.sh
+source ~/git-branch-name.sh
