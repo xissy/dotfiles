@@ -16,9 +16,12 @@ Below is a diff of all staged changes, coming from the command:
 git diff --cached
 \`\`\`
 
-Please generate a concise, one-line conventional commit message for these changes.
+Please generate a concise, one-line conventional commit message for these changes. under 70 characters.
 
 If branch name looks like ticket id (e.g. FEAT-123), include it at the beginning of the commit message (e.g. [FEAT-123] feat: add new feature).
+If branch name is not a ticket id, don't include it in the commit message.
+If branch name looks like a conventional commit prefix (e.g. feat, fix, refactor, chore, docs, test, perf, ci, style), include it in the commit message.
+
 Current branch name is: $(git branch --show-current)
 "
     }
