@@ -1,3 +1,29 @@
+# Function to get the name of the main (default) branch
+git_main_branch() {
+	local quiet=0
+
+	# Parse arguments
+	while [[ $# -gt 0 ]]; do
+		case "$1" in
+			-q|--quiet)
+				quiet=1
+				shift
+				;;
+			*)
+				return 1
+				;;
+		esac
+	done
+
+	local result
+	if [[ quiet -eq 0 ]]; then
+		result="$(git rev-parse --abbrev-ref origin/HEAD --)"
+	else
+		result="$(git rev-parse --verify --quiet --abbrev-ref origin/HEAD --)"
+	fi &&
+	echo "${result#origin/}"
+}
+
 # Function to delete local branches that no longer exist on remote
 ggone() {
 	# Function to print help
@@ -35,7 +61,7 @@ EOF
 
 	# Get current and main branches
 	current_branch="$(git rev-parse --abbrev-ref HEAD)"
-	main_branch="$(git-main-branch --quiet)"
+	main_branch="$(git_main_branch --quiet)"
 
 	# Get list of gone branches
 	gone_branches=($(git for-each-ref --format '%(refname) %(upstream:track)' refs/heads | awk '$2 == "[gone]" {sub("refs/heads/", "", $1); print $1}'))
