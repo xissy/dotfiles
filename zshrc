@@ -55,4 +55,4 @@ export PATH=$PATH:~/bin
 # git helper scripts
 source ~/git-commit-message.sh
 source ~/git-branch-name.sh
-source ~/git-delete-gone-branches.sh
+source ~/git-delete-branches.sh
