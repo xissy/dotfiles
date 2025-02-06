@@ -6,7 +6,8 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 eval "$(oh-my-posh init zsh --config ~/.config.omp.json)"
 
 # asdf
-. $(brew --prefix asdf)/libexec/asdf.sh
+export ASDF_DATA_DIR=$HOME/.asdf
+export PATH="$ASDF_DATA_DIR/shims:$PATH"
 
 # java
 . ~/.asdf/plugins/java/set-java-home.zsh
@@ -28,14 +29,6 @@ fi
 export CLICOLOR=1
 export LSCOLORS=ExGxBxDxCxEgEdxbxgxcxd
 
-# go
-export GOPATH=$(go env GOPATH)
-export GOROOT=$(go env GOROOT)
-export GOBIN=$(go env GOBIN)
-export PATH=$PATH:$GOPATH/bin
-export PATH=$PATH:$GOROOT/bin
-export PATH=$PATH:$GOBIN
-
 # direnv
 eval "$(direnv hook zsh)"
 
@@ -52,7 +45,6 @@ export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
 # bin
 export PATH=$PATH:~/bin
 
-# git helper scripts
 source ~/git-commit-message.sh
 source ~/git-branch-name.sh
 source ~/git-delete-branches.sh
