@@ -10,7 +10,7 @@
 gcm() {
     # Function to generate commit message
     generate_commit_message() {
-        git diff --cached | llm --model claude-3-5-sonnet-20241022 "
+        git diff --cached | llm --model anthropic/claude-3-5-sonnet-20241022 "
 Below is a diff of all staged changes, coming from the command:
 \`\`\`
 git diff --cached

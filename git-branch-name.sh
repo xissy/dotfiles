@@ -1,7 +1,7 @@
 gbn() {
     # Function to generate branch name
     generate_branch_name() {
-        git diff --cached | llm --model claude-3-5-sonnet-20241022 "
+        git diff --cached | llm --model anthropic/claude-3-5-sonnet-20241022 "
 Below is a diff of all staged changes, coming from the command:
 \`\`\`
 git diff --cached
