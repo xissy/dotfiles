@@ -10,7 +10,7 @@
 gcm() {
     # Function to generate commit message
     generate_commit_message() {
-        git diff --cached | llm --model anthropic/claude-3-5-sonnet-20241022 "
+        git diff --cached | llm --model claude-3.7-sonnet "
 Below is a diff of all staged changes, coming from the command:
 \`\`\`
 git diff --cached
@@ -20,7 +20,7 @@ Please generate a concise, one-line conventional commit message for these change
 
 If branch name looks like ticket id (e.g. FEAT-123), include it at the beginning of the commit message (e.g. [FEAT-123] feat: add new feature).
 If branch name is not a ticket id, don't include it in the commit message.
-If branch name looks like a conventional commit prefix (e.g. feat, fix, refactor, chore, docs, test, perf, ci, style), include it in the commit message.
+If branch name looks like a conventional commit prefix (e.g. feat: , fix: , refactor: , chore: , docs: , test: , perf: , ci: , style: ), include it in the commit message.
 
 Current branch name is: $(git branch --show-current)
 "
