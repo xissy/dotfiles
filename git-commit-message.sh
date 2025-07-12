@@ -10,7 +10,7 @@
 gcm() {
     # Function to generate commit message
     generate_commit_message() {
-        git diff --cached | llm --model claude-3.7-sonnet "
+        git diff --cached | claude -p --model sonnet "
 Below is a diff of all staged changes, coming from the command:
 \`\`\`
 git diff --cached
@@ -39,6 +39,7 @@ Current branch name is: $(git branch --show-current)
     # Main script
     echo "Generating AI-powered commit message..."
     commit_message=$(generate_commit_message)
+    commit_message=$(echo "$commit_message" | grep -v '^\s*```' | head -n 1 | tr -d '\n')
 
     while true; do
         echo -e "\nProposed commit message:"
