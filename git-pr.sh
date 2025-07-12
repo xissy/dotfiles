@@ -84,7 +84,48 @@ DESCRIPTION:
                 echo "$pr_title"
                 echo -e "\n=== Final PR Description ==="
                 echo "$pr_description"
-                echo -e "\n✅ PR content ready! Copy the title and description above for your PR."
+                
+                # Check if gh CLI is available
+                if ! command -v gh >/dev/null 2>&1; then
+                    echo -e "\n✅ PR content ready! Copy the title and description above for your PR."
+                    echo "💡 Install 'gh' CLI to automatically create/update PRs."
+                    return 0
+                fi
+                
+                # Check if there's already a PR for this branch
+                existing_pr=$(gh pr list --head "$current_branch" --json number --jq '.[0].number' 2>/dev/null)
+                
+                if [ -n "$existing_pr" ] && [ "$existing_pr" != "null" ]; then
+                    read_input "PR #$existing_pr already exists. Update it? (y/N): "
+                    if [[ $REPLY =~ ^[Yy]$ ]]; then
+                        if gh pr edit "$existing_pr" --title "$pr_title" --body "$pr_description"; then
+                            echo "✅ PR #$existing_pr updated successfully!"
+                            gh pr view "$existing_pr" --web
+                        else
+                            echo "❌ Failed to update PR. Please try manually."
+                        fi
+                    else
+                        echo "✅ PR content ready! Copy the title and description above."
+                    fi
+                else
+                    read_input "Create new PR on GitHub? (y/N): "
+                    if [[ $REPLY =~ ^[Yy]$ ]]; then
+                        # Push current branch if needed
+                        if ! git ls-remote --exit-code --heads origin "$current_branch" >/dev/null 2>&1; then
+                            echo "Pushing branch to origin..."
+                            git push -u origin "$current_branch"
+                        fi
+                        
+                        if gh pr create --title "$pr_title" --body "$pr_description" --base main; then
+                            echo "✅ PR created successfully!"
+                            gh pr view --web
+                        else
+                            echo "❌ Failed to create PR. Please try manually."
+                        fi
+                    else
+                        echo "✅ PR content ready! Copy the title and description above."
+                    fi
+                fi
                 return 0
                 ;;
             e|E )
