@@ -93,6 +93,12 @@ DESCRIPTION:
                 if [ -n "$existing_pr" ] && [ "$existing_pr" != "null" ]; then
                     read_input "PR #$existing_pr already exists. Update it? (y/N): "
                     if [[ $REPLY =~ ^[Yy]$ ]]; then
+                        # Push any unpushed commits first
+                        if ! git diff --quiet origin/"$current_branch" HEAD 2>/dev/null; then
+                            echo "Pushing latest commits..."
+                            git push origin "$current_branch"
+                        fi
+                        
                         if gh pr edit "$existing_pr" --title "$pr_title" --body "$pr_description"; then
                             echo "✅ PR #$existing_pr updated successfully!"
                             gh pr view "$existing_pr" --web
