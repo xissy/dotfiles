@@ -80,11 +80,6 @@ DESCRIPTION:
 
         case "$choice" in
             a|A )
-                echo -e "\n=== Final PR Title ==="
-                echo "$pr_title"
-                echo -e "\n=== Final PR Description ==="
-                echo "$pr_description"
-                
                 # Check if gh CLI is available
                 if ! command -v gh >/dev/null 2>&1; then
                     echo -e "\n✅ PR content ready! Copy the title and description above for your PR."
