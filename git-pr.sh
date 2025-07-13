@@ -1,17 +1,17 @@
 # -----------------------------------------------------------------------------
 # AI-powered Git PR Description Function
 # Copy paste this gist into your ~/.bashrc or ~/.zshrc to gain the `gpr` command. It:
-# 1) gets the diff between current branch and main branch
+# 1) gets the diff between current branch and origin/main branch
 # 2) sends them to an LLM to write the PR title and description
 # 3) allows you to easily accept, edit, regenerate, cancel
 
 gpr() {
 	# Function to generate PR title and description
 	generate_pr_content() {
-		git diff main...HEAD | claude -p --model sonnet "
-Below is a diff between the current branch and main branch, coming from the command:
+		git diff origin/main...HEAD | claude -p --model sonnet "
+Below is a diff between the current branch and origin/main branch, coming from the command:
 \`\`\`
-git diff main...HEAD
+git diff origin/main...HEAD
 \`\`\`
 
 Current branch name is: $(git branch --show-current)
@@ -56,8 +56,12 @@ DESCRIPTION:
 		return 1
 	fi
 
-	# Check if there are differences with main
-	if ! git diff --quiet main...HEAD; then
+	# Fetch latest changes from origin
+	echo "Fetching latest changes from origin..."
+	git fetch origin
+
+	# Check if there are differences with origin/main
+	if ! git diff --quiet origin/main...HEAD; then
 		echo "Generating AI-powered PR title and description..."
 		pr_content=$(generate_pr_content)
 
@@ -65,7 +69,7 @@ DESCRIPTION:
 		pr_title=$(echo "$pr_content" | grep "^TITLE:" | sed 's/^TITLE: //')
 		pr_description=$(echo "$pr_content" | sed -n '/^DESCRIPTION:/,$p' | sed '1d')
 	else
-		echo "No differences found between current branch and main."
+		echo "No differences found between current branch and origin/main."
 		return 1
 	fi
 
