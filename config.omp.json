@@ -24,7 +24,7 @@
           "template": " <#000>\uf07b \udb80\udc54</> {{ .Path }} ",
           "properties": {
             "folder_icon": "\uf115",
-            "folder_separator_icon": "\\",
+            "folder_separator_icon": "/",
             "home_icon": "\udb80\udedc",
             "style": "full"
           }
