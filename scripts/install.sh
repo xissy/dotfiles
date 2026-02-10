@@ -1,19 +1,9 @@
 #!/bin/bash
 set -e
 
-DIR=$(pwd)
-
-# source -> target
-links=(
-  "zshrc                ~/.zshrc"
-  "vimrc                ~/.vimrc"
-  "tmux.conf            ~/.tmux.conf"
-  "tool-versions        ~/.tool-versions"
-  "default-python-packages ~/.default-python-packages"
-  "config.omp.json      ~/.config.omp.json"
-  "ghostty.conf         ~/Library/Application Support/com.mitchellh.ghostty/config"
-  "karabiner.json       ~/.config/karabiner/karabiner.json"
-)
+SCRIPT_DIR=$(cd "$(dirname "$0")" && pwd)
+DIR=$(cd "$SCRIPT_DIR/.." && pwd)
+source "$SCRIPT_DIR/links.sh"
 
 for entry in "${links[@]}"; do
   src=$(echo "$entry" | awk '{print $1}')
