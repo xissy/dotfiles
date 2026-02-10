@@ -9,8 +9,6 @@ eval "$(oh-my-posh init zsh --config ~/.config.omp.json)"
 export ASDF_DATA_DIR=$HOME/.asdf
 export PATH="$ASDF_DATA_DIR/shims:$PATH"
 
-# java
-. ~/.asdf/plugins/java/set-java-home.zsh
 
 # zsh plugins
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -45,6 +43,17 @@ export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
 # bin
 export PATH=$PATH:~/bin
 
+# git helper scripts
 source ~/git-commit-message.sh
 source ~/git-branch-name.sh
 source ~/git-delete-branches.sh
+source ~/git-pr.sh
+
+# bun completions
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
+
+export PATH=$PATH:$HOME/.bun/bin
+
+#alias cc="CLAUDE_CODE_MAX_OUTPUT_TOKENS=64000 claude --dangerously-skip-permissions"
+alias cc="CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1 claude --dangerously-skip-permissions --teammate-mode auto --verbose"
+export PATH="$HOME/.local/bin:$PATH"
