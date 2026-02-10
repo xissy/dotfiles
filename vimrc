@@ -76,6 +76,9 @@ let g:airline_theme='one'
 " let's make sure we are in noncompatble mode
 set nocp
 
+" Yank to macOS clipboard
+set clipboard=unnamed
+
 " Sets how many lines of history VIM has to remember
 set history=700
 
