@@ -1,7 +1,7 @@
 "------------------------------------------------------------------------------
 " Taeho's .vimrc
 "
-" Prerequisite: `brew install vim --with-override-system-vim --with-python@2`
+" Prerequisite: `brew install vim`
 "------------------------------------------------------------------------------
 
 "------------------------------------------------------------------------------
@@ -20,25 +20,22 @@ Plug 'junegunn/fzf.vim'
 Plug 'rakr/vim-one'
 
 " Visual components
-Plug 'scrooloose/nerdtree'
-Plug 'scrooloose/nerdcommenter'
+Plug 'preservim/nerdtree'
+Plug 'preservim/nerdcommenter'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'Yggdroot/indentLine'
 " Make sure `ctags` and `gotags` are installed
-Plug 'majutsushi/tagbar'
+Plug 'preservim/tagbar'
 
 " Languages
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-Plug 'nsf/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
 ""Plug 'python-mode/python-mode', { 'branch': 'develop' }
-" Install jedi `pip install jedi`
 ""Plug 'davidhalter/jedi-vim'
 Plug 'jparise/vim-graphql'
 
 " Linter and completion
-Plug 'maralla/completor.vim'
-Plug 'w0rp/ale'
+Plug 'dense-analysis/ale'
 
 " git
 Plug 'tpope/vim-fugitive'
@@ -49,7 +46,7 @@ Plug 'junegunn/gv.vim'
 Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-endwise'
-Plug 'spf13/vim-autoclose'
+Plug 'jiangmiao/auto-pairs'
 
 Plug 'editorconfig/editorconfig-vim'
 
@@ -64,7 +61,15 @@ colorscheme one
 set background=dark
 
 set termguicolors
-hi Normal guibg=#21252b
+hi Normal guifg=#e0e0e0 guibg=NONE ctermbg=NONE
+hi Comment guifg=#7a8a7a gui=italic
+hi SignColumn guibg=NONE ctermbg=NONE
+hi LineNr guibg=NONE ctermbg=NONE
+hi EndOfBuffer guibg=NONE ctermbg=NONE
+hi FoldColumn guibg=NONE ctermbg=NONE
+hi GitGutterAdd guibg=NONE ctermbg=NONE
+hi GitGutterChange guibg=NONE ctermbg=NONE
+hi GitGutterDelete guibg=NONE ctermbg=NONE
 
 let g:airline_theme='one'
 
@@ -72,9 +77,6 @@ let g:airline_theme='one'
 "------------------------------------------------------------------------------
 " General
 "------------------------------------------------------------------------------
-
-" let's make sure we are in noncompatble mode
-set nocp
 
 " Yank to macOS clipboard
 set clipboard=unnamed
@@ -134,9 +136,9 @@ set completeopt=longest,menuone
 " Ignore compiled files
 set wildignore=*.o,*~,*.pyc
 if has("win16") || has("win32")
-    set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
-else
     set wildignore+=.git\*,.hg\*,.svn\*
+else
+    set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
 endif
 
 " Show line, column number, and relative position within a file in the status line
@@ -385,15 +387,6 @@ let g:tagbar_type_go = {
     \ 'ctagsbin'  : 'gotags',
     \ 'ctagsargs' : '-sort -silent'
 \ }
-
-
-"------------------------------------------------------------------------------
-" Cursors
-" http://vim.wikia.com/wiki/Change_cursor_shape_in_different_modes
-"------------------------------------------------------------------------------
-let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-let &t_SR = "\<Esc>]50;CursorShape=2\x7"
-let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 
 
 "------------------------------------------------------------------------------
