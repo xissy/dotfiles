@@ -43,11 +43,6 @@ export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
 # bin
 export PATH=$PATH:~/bin
 
-# git helper scripts
-source ~/git-commit-message.sh
-source ~/git-branch-name.sh
-source ~/git-delete-branches.sh
-source ~/git-pr.sh
 
 # bun completions
 [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
