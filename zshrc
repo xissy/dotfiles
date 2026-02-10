@@ -50,7 +50,7 @@ source ~/git-delete-branches.sh
 source ~/git-pr.sh
 
 # bun completions
-[ -s "/Users/xissysnd/.bun/_bun" ] && source "/Users/xissysnd/.bun/_bun"
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 
 export PATH=$PATH:$HOME/.bun/bin
 
@@ -59,4 +59,4 @@ alias cc="CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1 claude --dangerously-skip-permi
 export PATH="$HOME/.local/bin:$PATH"
 
 # Added by Antigravity
-export PATH="/Users/xissysnd/.antigravity/antigravity/bin:$PATH"
+export PATH="$HOME/.antigravity/antigravity/bin:$PATH"
