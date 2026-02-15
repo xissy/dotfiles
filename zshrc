@@ -52,3 +52,6 @@ export PATH=$PATH:$HOME/.bun/bin
 #alias cc="CLAUDE_CODE_MAX_OUTPUT_TOKENS=64000 claude --dangerously-skip-permissions"
 alias cc="CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1 claude --dangerously-skip-permissions --teammate-mode tmux --verbose"
 export PATH="$HOME/.local/bin:$PATH"
+
+# for ghostty ssh
+export TERM=xterm-256color
