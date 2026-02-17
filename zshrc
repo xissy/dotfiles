@@ -46,11 +46,11 @@ export PATH=$PATH:~/bin
 
 # bun completions
 [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
-
 export PATH=$PATH:$HOME/.bun/bin
 
-#alias cc="CLAUDE_CODE_MAX_OUTPUT_TOKENS=64000 claude --dangerously-skip-permissions"
-alias cc="CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1 claude --dangerously-skip-permissions --teammate-mode tmux --verbose"
+# claude code
+# tmux rename-window: 프로세스명(버전번호) 대신 "cc"로 표시
+alias cc='tmux rename-window "cc" 2>/dev/null; CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1 claude --dangerously-skip-permissions --teammate-mode tmux --verbose'
 export PATH="$HOME/.local/bin:$PATH"
 
 # for ghostty ssh
